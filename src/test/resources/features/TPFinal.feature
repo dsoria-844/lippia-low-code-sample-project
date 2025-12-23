@@ -46,7 +46,7 @@ Feature: Clockify
     And set value 2025-01-01T12:00:00Z of key start in body jsons/bodies/AddANewTimeEntry.json
     And set value 2025-01-01T14:00:00Z of key end in body jsons/bodies/AddANewTimeEntry.json
     And set value {{ProjectID}} of key projectId in body jsons/bodies/AddANewTimeEntry.json
-    And set value "Ultimo test para agregar horas a un proyecto" of key description in body jsons/bodies/AddANewTimeEntry.json
+    And set value "Decripcion para la grabacion del punto 2 - Segunda version" of key description in body jsons/bodies/AddANewTimeEntry.json
     When execute method POST
     Then the status code should be 201
     * print response
@@ -61,7 +61,7 @@ Feature: Clockify
     And header Content-Type = application/json
     And set value 2026-01-01T13:00:00Z of key start in body jsons/bodies/EditTimeEntry.json
     And set value 2026-01-01T15:00:00Z of key end in body jsons/bodies/EditTimeEntry.json
-    And set value "TimeEntryEditado correctamente" of key description in body jsons/bodies/EditTimeEntry.json
+    And set value "TimeEntryEditado para la grabacion del punto 3" of key description in body jsons/bodies/EditTimeEntry.json
     When execute method PUT
     Then the status code should be 200
     * print response
